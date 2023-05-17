@@ -10,6 +10,6 @@ This repository contains some content intended to help users become familiar wit
 	+ `frotz` is a Linux program that is *not installed by default*. You can add it from the Linux shell with `sudo pacman -S frotz-ncurses`. Then, also from the Linux shell, start the game with a command like `frotz <z-file-name>`.
 - _pics/_ contains many pics viewable using the VDC/80-column output
 	+ Use the `showvdc` command in the idun-shell to display images in the mono/ and vdc-color/ directories. _Note:_ most images are hi-res and will require 64kB VRAM.
-	+ Use the `showzx` command in the idun-shell to display images in the spectrum/ directroy. These are low-res and will work with 16kB VRAM.
+	+ Use the `showzx` command in the idun-shell to display images in the spectrum/ directory. These are low-res and will work with 16kB VRAM.
 	+ `ansilove.ans` is a color ANSI graphic useful for testing. Use `mode ans` to load ANSI character set, then `linux "cat ansilove.ans"` to display the file in the tty.
 - _sids/_ contains 50+ SID music files that can be played from the idun-shell using the `sidplay` command.
