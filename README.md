@@ -28,9 +28,10 @@ Contains several C128 games, a Galaga port for C64 mode, "shareware" version of 
 
 pics/
 -----
-Contains many pics viewable using the VDC/80-column output
+Contains many pics viewable using the VDC/80-column or the VIC-II/40-column display.
 + Use the `showvdc` command in the idun-shell to display images in the mono/ and vdc-color/ directories. _Note:_ most images are hi-res and will require 64kB VRAM.
 + Use the `showzx` command in the idun-shell to display images in the spectrum/ directory. These are low-res and will work with 16kB VRAM.
++ Use `koala.app` in the idun shell to display VIC-II Koala format images. Sample images are in the koa/ sub-directory.
 + `ansilove.ans` is a color ANSI graphic useful for testing. Use `mode ans` to load ANSI character set, then `linux "cat ansilove.ans"` to display the file in the tty.
 
 sids/
