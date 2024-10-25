@@ -8,6 +8,7 @@ depends=()
 optdepends=()
 makedepends=()
 provides=(idun-base)
+install="perms.install"
 
 package() {
   cd "${srcdir}"/..
