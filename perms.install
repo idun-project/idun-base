@@ -2,3 +2,8 @@ post_install() {
     chown -R idun /home/idun/idun-base
     chgrp -R idun /home/idun/idun-base
 }
+
+post_upgrade() {
+    chown -R idun /home/idun/idun-base
+    chgrp -R idun /home/idun/idun-base
+}
