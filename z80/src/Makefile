@@ -3,7 +3,8 @@ PRGS=$(BIN)/ansitest\
 $(BIN)/alive40\
 $(BIN)/alive80\
 $(BIN)/draw80\
-$(BIN)/dstar
+$(BIN)/dstar\
+$(BIN)/vicdemo
 
 all: $(PRGS)
 
