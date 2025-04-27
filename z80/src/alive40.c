@@ -6,7 +6,7 @@ extern char rawsound[];
 #define rawsoundlen 28160
 #asm
 ._rawsound
-        BINARY "its_alive_4bit.raw"
+        BINARY "a4bit.raw"
 #endasm
 
 int main()

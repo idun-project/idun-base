@@ -7,7 +7,7 @@ $(BIN)/dstar
 
 all: $(PRGS)
 
-$(PRGS): $(BIN)/%: %.c its_alive_4bit.raw
+$(PRGS): $(BIN)/%: %.c a4bit.raw
 	zcc +c128 -o $@ $<
 
 clean:
