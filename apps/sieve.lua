@@ -44,7 +44,7 @@ local function main()
     local line = ""
     local prime = 1
     local gen = primeGenerator()
-    while prime < 100000 do
+    while prime < 10000 do
         prime = gen.next()
         line = line .. prime .. " "
         if line:len() >= 75 then
