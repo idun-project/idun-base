@@ -1,0 +1,74 @@
+m8_nframe_handler = *
+    lda #0
+    ldy activePage
+    sta scrPtr
+    sty scrPtr+1
+    lda scrPage
+    bne +
+    jsr vdcMemStart
+    ;process new frame data
++   jsr mapstat
+-   lda zw+1
+    beq +
+    ldx #0
+    lda #<nframe_callback
+    ldy #>nframe_callback
+    jsr maprecv
+    dec zw+1
+    jmp -
++   ldx zw
+    lda #<nframe_callback
+    ldy #>nframe_callback
+    jsr maprecv
+    ;swap buffers
+    jsr swap
+    lda #0
+    jmp __m8_mailbox_reset
+nframe_callback = *
+    stx cbDataSz
+    lda #<mailboxB
+    ldy #>mailboxB
+    jsr aceTtyGet
+    lda scrPage
+    bne +
+    ;copy to VDC character memory
+    jmp vdcWriteChrs
+    ;copy to VIC-II character memory
++   ldx #0
+-   lda mailboxB,x
+    ldy #0
+    sta (scrPtr),y
+    inc scrPtr
+    bne +
+    inc scrPtr+1
++   inx
+    dec cbDataSz
+    beq +
+    jmp -
++   rts
+swap = *
+    lda scrPage
+    bne +
+    lda activePage
+    ora #$0f
+    ldx #$1c
+    jsr vdcWrite
+    jmp ++
++   lda activePage
+    sec
+    sbc #$c0
+    lsr
+    lsr
+    sta temp
+    lda $d018
+    and #$f0
+    ora temp
+    sta $d018
+++  lda chrPage1
+    cmp activePage
+    bne +
+    lda chrPage2
+    sta activePage 
+    rts
++   sta activePage
+    rts
