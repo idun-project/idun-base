@@ -1,5 +1,5 @@
 pkgname=idun-base
-pkgver=1.2.2
+pkgver=1.2.3
 pkgrel=1
 pkgdesc="Idun basic content files"
 arch=("any")
