@@ -19,5 +19,5 @@ package() {
   find z80 -type f -exec install -Dm 666 "{}" "${pkgdir}/usr/share/idun/base/{}" \;
 }
 sha512sums="
-8c4a3dd84fc5d0b01ab0ea9e3790d6564618871f5bdf5aae4ce0dee5ec841f43db984085030b16c727d3d25722f28f27a5c03d31ed3d433732ad8ef69174db97  idun-base-1.2.3.tar.gz
+73c54a3d503bde3a0abf2f8a258da6b3e2a5c6bbd8f8e68d93bee41346e48ebae801a9bee258efd7da753054cd0bd216502f6bd1831c8cc891ca02a56564ba82  idun-base-1.2.3.tar.gz
 "
